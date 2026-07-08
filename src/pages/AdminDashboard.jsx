@@ -146,61 +146,61 @@ export default function AdminDashboard() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3">
               <div>
-                <label className="block text-xs font-bold text-slate-500 uppercase mb-1">प्रेषक का नाम (Sender Name) *</label>
+                <label className="block text-[11px] font-bold text-slate-500 uppercase mb-1">प्रेषक का नाम (Sender Name) *</label>
                 <input
                   type="text"
                   required
                   value={senderName}
                   onChange={(e) => setSenderName(e.target.value)}
-                  placeholder="उदा. पुलिस अधीक्षक"
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-amber-500"
+                  placeholder="उदा. SP"
+                  className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs focus:outline-none focus:ring-1 focus:ring-amber-500"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-500 uppercase mb-1">प्रेषक विभाग/जनपद *</label>
+                <label className="block text-[11px] font-bold text-slate-500 uppercase mb-1">प्रेषक विभाग/जनपद *</label>
                 <input
                   type="text"
                   required
                   value={senderDept}
                   onChange={(e) => setSenderDept(e.target.value)}
-                  placeholder="उदा. रेंज मुख्यालय, कानपुर"
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-amber-500"
+                  placeholder="उदा. DIG MEERUT"
+                  className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs focus:outline-none focus:ring-1 focus:ring-amber-500"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-500 uppercase mb-1">डाक का विषय (Subject) *</label>
+                <label className="block text-[11px] font-bold text-slate-500 uppercase mb-1">डाक का विषय (Subject) *</label>
                 <input
                   type="text"
                   required
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
-                  placeholder="उदा. सीसीटीवी कैमरा रिपोर्ट"
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-amber-500"
+                  placeholder="उदा. CCTV REPORT"
+                  className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs focus:outline-none focus:ring-1 focus:ring-amber-500"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-500 uppercase mb-1">विवरण (Description)</label>
+                <label className="block text-[11px] font-bold text-slate-500 uppercase mb-1">विवरण (Description)</label>
                 <textarea
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   placeholder="अन्य आवश्यक विवरण लिखें..."
-                  rows="3"
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-amber-500"
+                  rows="2"
+                  className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs focus:outline-none focus:ring-1 focus:ring-amber-500"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-500 uppercase mb-1">दस्तावेज़ स्कैनिंग (PDF Upload Simulation)</label>
+                <label className="block text-[11px] font-bold text-slate-500 uppercase mb-1">दस्तावेज़ स्कैनिंग (PDF Upload Simulation)</label>
                 <div className="flex items-center space-x-3 mt-1">
                   <button
                     type="button"
                     onClick={() => setFileAttached(!fileAttached)}
-                    className={`px-4 py-2 border rounded-lg text-xs font-semibold transition ${
+                    className={`w-full py-1.5 border rounded-lg text-[11px] font-semibold transition ${
                       fileAttached 
                         ? 'bg-green-600 text-white border-green-600' 
                         : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border-slate-300'
@@ -212,11 +212,11 @@ export default function AdminDashboard() {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-500 uppercase mb-1">सम्बंधित प्रभारी अधिकारी का चयन *</label>
+                <label className="block text-[11px] font-bold text-slate-500 uppercase mb-1">सम्बंधित प्रभारी अधिकारी का चयन *</label>
                 <select
                   value={selectedIncharge}
                   onChange={(e) => setSelectedIncharge(e.target.value)}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-amber-500 bg-white"
+                  className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs focus:outline-none focus:ring-1 focus:ring-amber-500 bg-white"
                 >
                   {incharges.map((inch) => (
                     <option key={inch.id} value={inch.id}>
@@ -229,7 +229,7 @@ export default function AdminDashboard() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-2.5 bg-police-dark text-white font-bold rounded-lg hover:bg-police-blue transition duration-200 flex items-center justify-center space-x-1"
+                className="w-full py-2 bg-police-dark text-white font-bold rounded-lg hover:bg-police-blue transition duration-200 flex items-center justify-center space-x-1 cursor-pointer mt-2"
               >
                 <span>{loading ? 'दर्ज की जा रही है...' : 'डाक दर्ज और अग्रेषित करें'}</span>
               </button>
