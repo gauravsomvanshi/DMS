@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { getReceivedDaks, getAllDaks, getProfilesByRole, forwardDak, getDashboardStats } from '../services/dak';
 import { DashboardLayout } from '../layouts/DashboardLayout';
-import { Mail, ArrowUpRight, CheckCircle, FileText, Send, X, ExternalLink, MessageSquare } from 'lucide-react';
+import { Mail, ArrowUpRight, CheckCircle, FileText, Send, X, ExternalLink, MessageSquare, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function InchargeDashboard() {
